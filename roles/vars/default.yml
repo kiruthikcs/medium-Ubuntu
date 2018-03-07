@@ -5,6 +5,6 @@ Mysql_Database: kiruthiDB
 Mysql_Username: kiruthi
 Mysql_Password: pass@123
 Mysql_Host: localhost
-#Artifactory_DNS: 54.213.212.24 
+Artifactory_DNS: 54.213.212.24 
 nginx_cert_path: /etc/nginx/ssl/nginx.crt
 nginx_key_path: /etc/nginx/ssl/nginx.key

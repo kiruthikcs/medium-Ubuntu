@@ -82,7 +82,10 @@ if [ $? -ne 0 ]; then
                     DISTRIB_DESCRIPTION="Ubuntu 16.04.3 LTS")
                         echo "inside dist description"
                         apt-get update -y
-                        apt-add-repository ppa:ansible/ansible -y                
+                        sudo apt-get upgrade -y
+                        sudo apt install software-properties-common -y
+                        apt-add-repository ppa:ansible/ansible -y     
+                        sudo apt-get update -y           
                         ;;
                 esac
                 apt-get install -y ansible

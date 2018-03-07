@@ -1,8 +1,8 @@
 ---
-- name: Install the nginx rpm from a remote repo
-  apt:
-    name: http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm
-    state: present
+#- name: Install the nginx rpm from a remote repo
+#  apt:
+#    name: http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm
+#    state: present
 
 - name: Install Nginx Service
   apt: name=nginx state=latest update_cache=true

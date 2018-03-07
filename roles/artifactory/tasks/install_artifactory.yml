@@ -6,13 +6,13 @@
   shell: echo "deb https://jfrog.bintray.com/artifactory-pro-debs xenial main" | sudo tee -a /etc/apt/sources.list
 #  shell: sudo apt-get update
 
-#- name: update 
-#  apt:
-#    update_cache: yes
-#    cache_valid_time: 3600
+- name: update 
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
 
 - name: Install Java and  Artifactory
-  apt: pkg={{item}} state=installed
+  apt: allow_unauthenticated=yes pkg={{ item }} state=present
 #  action:  apt pkg={{item}} state=installed
   with_items:
     - jfrog-artifactory-pro 
@@ -20,9 +20,8 @@
     - unzip
     - zip
     - wget
-#  allow_unauthenticated: yes
 #  force: yes
-#   become: yes
+  become: yes
 #   become_user: root
 #   allow_unauthenticated: yes
 #  dpkg_options: 'force'
