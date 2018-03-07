@@ -1,13 +1,13 @@
 ---
 # This playbook install mysql server and Artifactory 
 
-- hosts: mysql
+- hosts: localhost
   gather_facts: true
   roles:
     - role: mysql
       packages_install_mysql: true
 
-- hosts: application
+- hosts: localhost
   gather_facts: true
   roles:
      - role: artifactory
