@@ -23,6 +23,11 @@
 #  failed_when: "audit_result.rc != 0"
 #  changed_when: false
 
+- lineinfile:
+    path: /etc/nginx/nginx.conf
+    regexp: 'ssl_prefer_server_ciphers on;'
+    line: '#ssl_prefer_server_ciphers on;'
+
 - name: Restart the Nginx service
   service: name=nginx state=restarted enabled=true
 
