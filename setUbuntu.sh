@@ -88,6 +88,10 @@ if [ $? -ne 0 ]; then
                         sudo apt-get update -y           
                         ;;
                 esac
+                apt-get update -y
+                sudo apt install software-properties-common -y
+                echo -ne "\n" | apt-add-repository ppa:ansible/ansible  
+                sudo apt-get update -y
                 apt-get install -y ansible
             fi
     esac
